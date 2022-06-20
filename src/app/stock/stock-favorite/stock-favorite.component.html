@@ -1,0 +1,12 @@
+<div style="background-color: white" *ngFor="let stock of stocks$ | async">
+    <table id="tablestock">
+      <tr *ngIf="stock.favorite == true">
+        <td>
+          {{stock.code}}
+        </td>
+        <td>
+          <button (click)="onToggleFavorite(stock)">Remove</button>
+        </td>
+      </tr>
+    </table>
+</div>

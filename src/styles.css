@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    display: block;
+    margin: auto;
+}
+*{
+  box-sizing: unset;
+}
+
+@import '../src/app/weather/dashboard/dashboard.component.css';
+
+.btn-region{
+  background-color: #fff;
+  border: solid 2px rgb(215 215 215);
+  border-radius: 2px;
+  box-shadow: 0 2px 0.5rem rgb(0 0 255 / 28%);
+  font-weight: bold;
+  font-size: 17px;
+  padding: 1px 18px;
+}
+.btn-region-dark{
+  background-color: transparent;
+  border: solid 2px rgb(215 215 215);
+  border-radius: 2px;
+  box-shadow: 0 2px 0.5rem rgb(0 0 255 / 28%);
+  font-weight: bold;
+  font-size: 17px;
+  padding: 1px 18px;
+}
+.btn-region .p-dropdown-label, .btn-region .p-dropdown-trigger{
+  color: #4e5359 !important;
+}
+.btn-region.p-focus, .btn-region-dark.p-focus{
+  box-shadow: none !important;
+  border: solid 2px rgb(215 215 215) !important;
+}
+.btn-region-dark .p-dropdown-label, .btn-region-dark .p-dropdown-trigger{
+  color: #fff !important;
+}
+.country-item .p-togglebutton.p-button:hover, .country-item .p-togglebutton.p-button.p-highlight:hover{
+  border: solid 2px;
+}
+.country-item .p-togglebutton.p-button .p-button-icon-left, .country-item .p-togglebutton.p-button .p-button-icon-right{
+  color: black;
+}
+.country-item .p-togglebutton.p-button.p-highlight .p-button-icon-left{
+  color: #22C55E;
+}
+.country-item .p-togglebutton.p-button.p-highlight:hover{
+  background-color: transparent;
+  border-color: #DC2626;
+}
+.country-item .p-togglebutton.p-button.p-highlight:focus, .country-item .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):focus{
+  box-shadow: none;
+}
+.country-item .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover{
+  background-color: transparent;
+  border-color: #22C55E;
+  color: #22C55E;
+}
+.country-item .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover .p-button-icon-left, .country-item .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover .p-button-icon-right{
+  color: #22C55E;
+}
+.country-item .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left, .country-item .p-togglebutton.p-button.p-highlight:hover .p-button-icon-right{
+  color: #DC2626;
+}

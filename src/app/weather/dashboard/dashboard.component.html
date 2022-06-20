@@ -1,0 +1,39 @@
+<div class="main__container">
+  <div class="weather-search">
+
+    <div class="search-container">
+      <div class="region-dropdown">
+        <p-dropdown [options]="regions" placeholder="Châu lục" optionLabel="name"
+                    [styleClass]="darkModeActive? 'btn-region-dark' : 'btn-region' " (onChange)="regionClick($event.value)"></p-dropdown>
+      </div>
+      <div class="search-dropdown">
+        <button class="btn-search" [ngClass]="{'btn-search-dark': darkModeActive}" (click)="opDropdown()">Chọn thành phố bạn muốn theo dõi <i class="pi pi-angle-down"></i></button>
+
+        <div class="search-content" *ngIf="dropdown">
+          <p-listbox  [options]="haveRegion ? regionCapitals : capitals"  [filter]="true" optionLabel="name"
+                      emptyFilterMessage="Không có kết quả nào" [readonly]="true"
+                      [listStyle]="{'max-height':'250px'}" [style]="{'width':'100%'}">
+            <ng-template let-country pTemplate="item">
+              <div class="country-item">
+                <img [src]="country.flag" class="flag"/>
+                <div class="country-name">{{country.name}}</div>
+                <div>
+                  <p-toggleButton [(ngModel)]="country.follow" (onChange)="followChange(country)"
+                                  [onIcon]="'pi pi-check'" offIcon="pi pi-plus"
+                                  styleClass="p-button-rounded p-button-success p-button-text">
+                  </p-toggleButton>
+                </div>
+              </div>
+            </ng-template>
+          </p-listbox>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="weather-cards">
+    <app-weather-card city="hanoi" ></app-weather-card>
+    <ng-container *ngFor="let country of followedCapitals">
+      <app-weather-card [city]="country.name" ></app-weather-card>
+    </ng-container>
+  </div>
+</div>

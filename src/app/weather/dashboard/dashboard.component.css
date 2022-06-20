@@ -1,0 +1,64 @@
+.weather-search{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.search-container{
+  padding: 10px;
+  background-color: #00000040;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.search-dropdown {
+  position: relative;
+}
+.btn-search{
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px 18px;
+  background-color: #fff;
+  border: solid 2px rgb(215 215 215);
+  border-radius: 2px;
+  color: #4e5359;
+  box-shadow: 0 2px 0.5rem rgb(0 0 255 / 28%);
+}
+.btn-search-dark{
+  background-color: transparent;
+  color: #fff;
+}
+.btn-search i{
+  margin-left: 10px;
+}
+.search-content {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0%;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.country-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.country-item img.flag {
+  width: 40px;
+  height: 20px;
+}
+.country-item .country-name{
+
+}
+.weather-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
